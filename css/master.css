@@ -64,6 +64,7 @@ textarea:focus  {
 .navbar {
     background-color: var(--dark-color);
     height: 72px;
+    position: relative;
 }
 .navbar .navbar-nav .nav-link {
     color: #fff
@@ -89,6 +90,17 @@ textarea:focus  {
 }
 .navbar .navbar-toggler[aria-expanded='true'] {
     border-color: var(--green-color) ;
+}
+@media (max-width: 992px) {
+    .navbar .my-menu {
+        position: absolute;
+        top: 75px;
+        background: rgb(9 23 44 / 91%);
+        width: calc(100% - 22px);
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 18px;
+    }
 }
 /* ### End Navbar ### */
 
@@ -263,6 +275,16 @@ footer .contact ul li a {
     line-height: 40px;
     border-radius: 50%;
     text-align: center;
+}
+footer .links ul li a {
+    transition: var(--main-trans);
+    -webkit-transition: var(--main-trans);
+    -moz-transition: var(--main-trans);
+    -ms-transition: var(--main-trans);
+    -o-transition: var(--main-trans);
+}
+footer .links ul li a:hover {
+    color: #fff !important;
 }
 footer .facebook {
     background-color: #1877f2;
